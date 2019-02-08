@@ -1,0 +1,72 @@
+body {
+    background: rgb(255, 255, 0);
+    width: 100%
+}
+
+h1 {
+    font-size: 43px;
+    border: solid 5px  blue;
+    background: white;
+    text-align: center;
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right:10%;
+    padding: 15px;
+    font-family: "Mystery Quest", cursive;
+}
+
+h2 {
+    font-family: "Spirax", cursive;
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+
+img {
+    margin: 10px;
+}
+
+
+.sidebar {
+    padding: 5px;
+    position: relative;
+    border-top: solid blue 2px;
+    border-bottom: solid blue 2px;
+    margin-bottom: 5px;
+    font-family: "Spirax", cursive;
+    font-size: 12px;
+}
+
+span {
+    border: solid  blue 2px;
+    padding-left: 3px;
+    padding-right:3px;
+    background-color: grey; 
+    font-size: 15px;
+}
+
+.background {
+    background-image: url("images/Movie_Reel.jpg");
+    border: solid 5px blue;
+}
+
+.container {
+    background-color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    border: solid 3px blue;
+}
+
+#currentword {
+    font-size: 30px;
+    font-family: "Spirax", cursive;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#scoreboard {
+    padding: 20px;
+}
