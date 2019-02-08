@@ -38,43 +38,43 @@ function Game() {
 function img() {
     
     if (randomWord === movies[0]) {
-        document.getElementById("image").src = "assets/images/Pinocchio.jpg";
+        document.getElementById("image").src = "assets/images/Pinocchio.png";
     }
     
     else if (randomWord === movies[1]) {
-        document.getElementById("image").src = "assets/images/Dumbo.jpg";
+        document.getElementById("image").src = "assets/images/Dumbo.png";
     }
     
     else if (randomWord === movies[2]) {
-        document.getElementById("image").src = "assets/images/Bambi.jpg";
+        document.getElementById("image").src = "assets/images/Bambi.png";
     }
     
     else if (randomWord === movies[3]) {
-        document.getElementById("image").src = "assets/images/Cinderella.jpg";
+        document.getElementById("image").src = "assets/images/Cinderella.png";
     }
     
     else if (randomWord === movies[4]) {
-        document.getElementById("image").src = "assets/images/Aladdin.jpg";
+        document.getElementById("image").src = "assets/images/Aladdin.png";
     }
     
     else if (randomWord === movies[5]) {
-        document.getElementById("image").src = "assets/images/Pocahontas.jpg";
+        document.getElementById("image").src = "assets/images/Pocahontas.png";
     }
     
     else if (randomWord === movies[6]) {
-        document.getElementById("image").src = "assets/images/Hercules.jpg";
+        document.getElementById("image").src = "assets/images/Hercules.png";
     }
 
     else if (randomWord === movies[7]) {
-        document.getElementById("image").src = "assets/images/Mulan.jpg";
+        document.getElementById("image").src = "assets/images/Mulan.png";
     }
 
     else if (randomWord === movies[8]) {
-        document.getElementById("image").src = "assets/images/Tarzan.jpg";
+        document.getElementById("image").src = "assets/images/Tarzan.png";
     }    
 
     else if (randomWord === movies[9]) {
-        document.getElementById("image").src = "assets/images/Frozen.jpg";
+        document.getElementById("image").src = "assets/images/Frozen.png";
     }
 
 };
