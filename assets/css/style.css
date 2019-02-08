@@ -12,11 +12,11 @@ h1 {
     margin-left: 10%;
     margin-right:10%;
     padding: 15px;
-    font-family: "Mystery Quest", cursive;
+    font-family: 'Mystery Quest', cursive;
 }
 
 h2 {
-    font-family: "Spirax", cursive;
+    font-family: 'Spirax', cursive;
     font-size: 20px;
     padding-top: 10px;
 }
@@ -33,7 +33,7 @@ img {
     border-top: solid blue 2px;
     border-bottom: solid blue 2px;
     margin-bottom: 5px;
-    font-family: "Spirax", cursive;
+    font-family: 'Spirax', cursive;
     font-size: 12px;
 }
 
@@ -62,7 +62,7 @@ span {
 
 #currentword {
     font-size: 30px;
-    font-family: "Spirax", cursive;
+    font-family: 'Spirax', cursive;
     margin-bottom: 10px;
     margin-top: 10px;
 }
