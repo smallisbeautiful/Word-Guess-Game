@@ -1,73 +1,156 @@
-var $ = function (id) {
-    return document.getElementById (id); 
-}
+ 
+var movies = ["Pinocchio","Dumbo","Bambi","Cinderella","Aladdin","Pocahontas","Hercules","Mulan","Tarzan","Frozen"]
 
-var game = ["Pinocchio","Dumbo","Bambi","Cinderella","Aladdin","Pocahontas","Hercules","Mulan","Tarzan","Frozen"]
-var choice = Math.floor(Math.random()*10);
-var answer = game[choice];
-var myLength = answer.length
-var display = [myLenght];
-var win = myLength;
-var letters = answer.split("");
-var attemptsLeft = 10;
-var output = "",
+var randomWord = "";
+var lettersOfWord = []
+var blanks = 0;
+var blanksAndCorrect = [];
+var alreadyGuessed = [];
+
+var wins = 0;
+var losses = 0;
+var guessesRemaining = 9;
 
 
-var setup = function() {
 
-    for (var i=0; i < answer.length; i++) {
+function Game() {
+    
+    randomWord = movies[Math.floor(Math.random() * movies.length)];
 
-        display[i] = "_ ";
-        output = output + display[i];
+    lettersOfWord = randomWord.split("");
+
+    blanks = lettersOfWord.length;
+
+    for (var i = 0; i < blanks; i++) {
+        blanksAndCorrect.push("_");
     }
-    document.getElementById("game").innerHTML = output;
-    output = "";
 
+    document.getElementById("currentword").innerHTML = "  " + blanksAndCorrect.join("  ");
+
+    console.log(randomWord);
+    console.log(lettersOfWord)
+    console.log(blanks)
+    console.log(blanksAndCorrect)
 }
 
-var submit = function() {
-
-    output = " ";
-    userLetter = $("letters").value;
-    $("letters").value = " ";
 
 
-    for (var c=0; c < answer.length; c++) {
-        alert(letters[c]);
-        if(userLetter.toUpperCase() == letters[c]) {
-            display[c] = userLetter.toUpperCase();
-            win--;
+function img() {
+    
+    if (randomWord === movies[0]) {
+        document.getElementById("image").src = "assets/images/Pinocchio.jpg";
+    }
+    
+    else if (randomWord === movies[1]) {
+        document.getElementById("image").src = "assets/images/Dumbo.jpg";
+    }
+    
+    else if (randomWord === movies[2]) {
+        document.getElementById("image").src = "assets/images/Bambi.jpg";
+    }
+    
+    else if (randomWord === movies[3]) {
+        document.getElementById("image").src = "assets/images/Cinderella.jpg";
+    }
+    
+    else if (randomWord === movies[4]) {
+        document.getElementById("image").src = "assets/images/Aladdin.jpg";
+    }
+    
+    else if (randomWord === movies[5]) {
+        document.getElementById("image").src = "assets/images/Pocahontas.jpg";
+    }
+    
+    else if (randomWord === movies[6]) {
+        document.getElementById("image").src = "assets/images/Hercules.jpg";
+    }
+
+    else if (randomWord === movies[7]) {
+        document.getElementById("image").src = "assets/images/Mulan.jpg";
+    }
+
+    else if (randomWord === movies[8]) {
+        document.getElementById("image").src = "assets/images/Tarzan.jpg";
+    }    
+
+    else if (randomWord === movies[9]) {
+        document.getElementById("image").src = "assets/images/Frozen.jpg";
+    }
+
+};
+
+
+
+function reset() {
+    guessesRemaining = 10;
+    alreadyGuessed = [];
+    blanksAndCorrect = [];
+    Game()
+}
+
+
+
+function checkLetters(letter) {
+    var letterInWord = false;
+    
+    for (var i = 0; i < blanks; i++) {
+        if (randomWord[i] == letter) {
+            letterInWord = true;
         }
-            output = output + display[c] + " ";
-
     }
-
-    document.getElementById("game").innerHTML = output;
-    output = " ";
-    attemptsLeft--;
-
-    if(win < 1) {
-        document.getElementById("guesses").innerHTML = "You win!";
-    }
-
-    else if (attemptsLeft < 1) {
-        document.getElementById("guesses").innerHTML = "You lose!";
-    }
-
-    else {
-        document.getElementById("guesses").innerHTML = "Number of Guesses Remaining: "
-    }
-
-}
-
-
-window.onload = function() {
-    setup();
-    $("submit").onclick = submit;
-}
     
-"<p>Wins: " + win + "</p>";
-
-"<p>Number of Guesses Remaining: " + attemptsLeft + "</p>";         
+    if (letterInWord) {
         
+        for (var i = 0; i < blanks; i++) {
+            if (randomWord[i] == letter) {
+                blanksAndCorrect[i] = letter;
+            }
+        }
+    }
     
+    else {
+        alreadyGuessed.push(letter);
+        guessesRemaining--;
+    }
+    console.log(blanksAndCorrect);
+}
+
+
+
+function complete() {
+    console.log("Wins: " + wins + "| Losses: " + losses + "| Guesses Remaining: " + guessesRemaining)
+
+    
+    if (lettersOfWord.toString() == blanksAndCorrect.toString()) {
+        wins++;
+        reset()
+        document.getElementById("winscounter").innerHTML = " " + wins;
+
+    } else if (guessesRemaining === 0) {
+        losses++;
+        reset()
+        document.getElementById("image").src = "assets/images/Try_Again.png"
+        document.getElementById("lossescounnter").innerHTML = " " + losses;
+    }
+    
+    document.getElementById("currentword").innerHTML = "  " + blanksAndCorrect.join(" ");
+    document.getElementById("guessesremaining").innerHTML = " " + guessesRemaining;
+}
+
+
+
+Game()
+
+document.onkeyup = function (event) {
+    var guesses = String.fromCharCode(event.keyCode).toLowerCase();
+    
+    checkLetters(guesses);
+    
+    complete();
+    
+    console.log(guesses);
+
+    
+    document.getElementById("alreadyguessed").innerHTML = "  " + alreadyGuessed.join(" ");
+}
+   
