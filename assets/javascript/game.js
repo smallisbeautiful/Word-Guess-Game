@@ -1,5 +1,5 @@
  
-var movies = ["Pinocchio","Dumbo","Bambi","Cinderella","Aladdin","Pocahontas","Hercules","Mulan","Tarzan","Frozen"]
+var movies = ["pinocchio","dumbo","bambi","cinderella","aladdin","pocahontas","hercules","mulan","tarzan","frozen"]
 
 var randomWord = "";
 var lettersOfWord = []
@@ -34,47 +34,58 @@ function Game() {
 }
 
 
+var  = document.getElementById("pinocchio");
+var  = document.getElementById("dumbo");
+var  = document.getElementById("bambi");
+var  = document.getElementById("cinderella");
+var  = document.getElementById("aladdin");
+var  = document.getElementById("pocahontas");
+var  = document.getElementById("hercules");
+var  = document.getElementById("mulan");
+var  = document.getElementById("tarzan");
+var  = document.getElementById("frozen");
+
 
 function img() {
     
     if (randomWord === movies[0]) {
-        document.getElementById("image").src = "assets/images/Pinocchio.png";
+        document.getElementById("pinocchio").src = "./assets/images/pinocchio.png";
     }
     
     else if (randomWord === movies[1]) {
-        document.getElementById("image").src = "assets/images/Dumbo.png";
+        document.getElementById("dumbo").src="./assets/images/dumbo.png";
     }
     
     else if (randomWord === movies[2]) {
-        document.getElementById("image").src = "assets/images/Bambi.png";
+        document.getElementById("bambi").src="./assets/images/bambi.png";
     }
     
     else if (randomWord === movies[3]) {
-        document.getElementById("image").src = "assets/images/Cinderella.png";
+        document.getElementById("cinderella").src="./assets/images/cinderella.png";
     }
     
     else if (randomWord === movies[4]) {
-        document.getElementById("image").src = "assets/images/Aladdin.jpg";
+        document.getElementById("aladdin").src="./assets/images/aladdin.jpg";
     }
     
     else if (randomWord === movies[5]) {
-        document.getElementById("image").src = "assets/images/Pocahontas.png";
+        document.getElementById("pocahontas").src="./assets/images/pocahontas.png";
     }
     
     else if (randomWord === movies[6]) {
-        document.getElementById("image").src = "assets/images/Hercules.png";
+        document.getElementById("hercules").src="./assets/images/hercules.png";
     }
 
     else if (randomWord === movies[7]) {
-        document.getElementById("image").src = "assets/images/Mulan.png";
+        document.getElementById("mulan").src="./assets/images/mulan.png";
     }
 
     else if (randomWord === movies[8]) {
-        document.getElementById("image").src = "assets/images/Tarzan.png";
+        document.getElementById("tarzan").src="./assets/images/tarzan.png";
     }    
 
     else if (randomWord === movies[9]) {
-        document.getElementById("image").src = "assets/images/Frozen.png";
+        document.getElementById("frozen").src="./assets/images/frozen.png";
     }
 
 };
