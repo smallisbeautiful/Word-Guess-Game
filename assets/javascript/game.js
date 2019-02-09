@@ -54,7 +54,7 @@ function img() {
     }
     
     else if (randomWord === movies[4]) {
-        document.getElementById("image").src = "assets/images/Aladdin.png";
+        document.getElementById("image").src = "assets/images/Aladdin.jpg";
     }
     
     else if (randomWord === movies[5]) {
