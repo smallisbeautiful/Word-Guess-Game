@@ -1,24 +1,26 @@
 body {
     background-image: url("../images/Disney_Movie_Reel.jpg");
-    width: 100%
+    width: 100%;
 }
 
 h1 {
+    font-family: 'Mystery Quest', cursive;
     font-size: 50px;
+    font-weight: bold;
     border: solid 5px  blue;
     background: white;
     text-align: center;
     margin-top: 2%;
     margin-left: 10%;
     margin-right:10%;
-    padding: 15px;
-    font-family: 'Mystery Quest', cursive;
+    padding: 25px;
+    
 }
 
 h2 {
     font-family: 'Spirax', cursive;
     font-size: 20px;
-    padding-top: 10px;
+    padding-top: 15px;
 }
 
 
@@ -63,8 +65,8 @@ span {
 #currentword {
     font-size: 30px;
     font-family: 'Spirax', cursive;
-    margin-bottom: 10px;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #scoreboard {
