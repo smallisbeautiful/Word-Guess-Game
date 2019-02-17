@@ -9,7 +9,7 @@ var alreadyGuessed = [];
 
 var wins = 0;
 var losses = 0;
-var guessesRemaining = 9;
+var guessesRemaining = 10;
 
 
 
@@ -129,9 +129,9 @@ function complete() {
         
     } else if (guessesRemaining === 0) {
         losses++;
-        reset()
         document.getElementById("image").src = "assets/images/Try_Again.png"
-        document.getElementById("lossescounnter").innerHTML = " " + losses;
+        document.getElementById("lossescounter").innerHTML = " " + losses;
+        reset()
     }
     
     document.getElementById("currentword").innerHTML = "  " + blanksAndCorrect.join(" ");
